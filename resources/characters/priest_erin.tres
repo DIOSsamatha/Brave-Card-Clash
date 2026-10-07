@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://priest001"]
+
+[ext_resource type="Script" path="res://scripts/resources/character_data.gd" id="1_char_data"]
+
+[resource]
+script = ExtResource("1_char_data")
+char_name = "牧师·艾琳"
+class_type = 3
+portrait = "res://resources/portraits/priest_erin.png"
+description = "防御型勇者，以治疗和护盾支撑持久战。"
+max_health = 45.0
+base_damage = 3.0
+passive_name = "神圣祝福"
+passive_desc = "每赢1局恢复1点生命值"
+passive_trigger = "on_win"
+skill1_name = "治愈之光"
+skill1_cooldown = 4
+skill1_desc_lv1 = "恢复4点生命值（冷却4回合）"
+skill1_desc_lv2 = "恢复6点生命值（冷却4回合）"
+skill1_desc_lv3 = "恢复8点生命值并清除1个负面状态（冷却4回合）"
+skill2_name = "圣光庇护"
+skill2_cooldown = 5
+skill2_desc_lv1 = "免疫本局所有伤害与负面效果（冷却5回合）"
+skill2_desc_lv2 = "免疫本局所有伤害与负面效果；若未受伤则回复2点（冷却5回合）"
+skill2_desc_lv3 = "免疫本局所有伤害与负面效果，持续2局（冷却5回合）"
+evolution_desc_lv10 = "治愈之光恢复量提升"
+evolution_desc_lv20 = "圣光庇护未受伤转回血"
+evolution_desc_lv30 = "圣光庇护质变：持续2局"

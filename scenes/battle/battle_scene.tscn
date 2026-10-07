@@ -1,0 +1,328 @@
+[gd_scene load_steps=2 format=3 uid="uid://battle_scene_v2"]
+
+[ext_resource type="Script" path="res://scenes/battle/battle_scene.gd" id="1_battle"]
+
+[node name="BattleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_mode = 2
+script = ExtResource("1_battle")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_mode = 2
+
+[node name="TitleLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "第 1 层 - 妖精幻境 - 小局 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 22
+
+[node name="PlayerPortrait" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -410.0
+offset_right = 330.0
+offset_bottom = -110.0
+pivot_offset = Vector2(150, 150)
+z_index = 5
+stretch_mode = 5
+expand_mode = 1
+
+[node name="EnemyPortrait" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -410.0
+offset_right = -30.0
+offset_bottom = -110.0
+pivot_offset = Vector2(150, 150)
+z_index = 5
+stretch_mode = 5
+expand_mode = 1
+
+[node name="MainArea" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.08
+anchor_right = 1.0
+anchor_bottom = 0.72
+offset_left = 20.0
+offset_top = -10.0
+offset_right = -20.0
+offset_bottom = -100.0
+theme_override_constants/separation = 30
+
+[node name="PlayerPanel" type="VBoxContainer" parent="MainArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PlayerNameLabel" type="Label" parent="MainArea/PlayerPanel"]
+layout_mode = 2
+text = "雷恩"
+horizontal_alignment = 0
+theme_override_font_sizes/font_size = 18
+
+[node name="PlayerHPBox" type="HBoxContainer" parent="MainArea/PlayerPanel"]
+layout_mode = 2
+
+[node name="PlayerHPBar" type="ProgressBar" parent="MainArea/PlayerPanel/PlayerHPBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(200, 20)
+max_value = 40.0
+value = 28.0
+show_percentage = false
+
+[node name="PlayerHPLabel" type="Label" parent="MainArea/PlayerPanel/PlayerHPBox"]
+layout_mode = 2
+text = "HP: 28/40"
+theme_override_font_sizes/font_size = 14
+
+[node name="PlayerHandLabel" type="Label" parent="MainArea/PlayerPanel"]
+layout_mode = 2
+text = "你的手牌: 9♠ K♠  [点数: 19]"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="PlayerStatusLabel" type="Label" parent="MainArea/PlayerPanel"]
+layout_mode = 2
+text = "姿态: 进攻"
+theme_override_font_sizes/font_size = 13
+
+[node name="PredictLabel" type="Label" parent="MainArea/PlayerPanel"]
+layout_mode = 2
+text = ""
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.3, 0.9, 0.3, 1)
+
+[node name="EnemyPanel" type="VBoxContainer" parent="MainArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 0
+theme_override_constants/separation = 8
+
+[node name="EnemyNameLabel" type="Label" parent="MainArea/EnemyPanel"]
+layout_mode = 2
+text = "恶作剧花精"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="EnemyHPBox" type="HBoxContainer" parent="MainArea/EnemyPanel"]
+layout_mode = 2
+alignment = 2
+
+[node name="EnemyHPBar" type="ProgressBar" parent="MainArea/EnemyPanel/EnemyHPBox"]
+modulate = Color(0.85, 0.2, 0.2, 1.0)
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(200, 20)
+max_value = 18.0
+value = 18.0
+show_percentage = false
+
+[node name="EnemyHPLabel" type="Label" parent="MainArea/EnemyPanel/EnemyHPBox"]
+layout_mode = 2
+text = "HP: 18/18"
+theme_override_font_sizes/font_size = 14
+
+[node name="EnemyHandLabel" type="Label" parent="MainArea/EnemyPanel"]
+layout_mode = 2
+text = "庄家手牌: 9♥ ??"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="EnemyStatusLabel" type="Label" parent="MainArea/EnemyPanel"]
+layout_mode = 2
+text = "姿态: ???"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 13
+
+[node name="BottomBar" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -175.0
+grow_mode = 0
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="StatusEffectLabel" type="Label" parent="BottomBar"]
+layout_mode = 2
+text = "状态: 你:迷雾"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
+
+[node name="ResultLabel" type="Label" parent="BottomBar"]
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1.0, 0.85, 0.0, 1.0)
+theme_override_font_sizes/font_size = 15
+
+[node name="LogLabel" type="Label" parent="BottomBar"]
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.6, 0.9, 1.0, 1.0)
+
+[node name="ActionRow" type="HBoxContainer" parent="BottomBar"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="HitButton" type="Button" parent="BottomBar/ActionRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "要牌"
+
+[node name="StandButton" type="Button" parent="BottomBar/ActionRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "停牌"
+
+[node name="DoubleButton" type="Button" parent="BottomBar/ActionRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 40)
+text = "加倍"
+
+[node name="StanceOverlay" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -80.0
+offset_right = 220.0
+offset_bottom = 80.0
+
+[node name="StanceVBox" type="VBoxContainer" parent="StanceOverlay"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="StanceTitle" type="Label" parent="StanceOverlay/StanceVBox"]
+layout_mode = 2
+text = "选择你的姿态"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+
+[node name="StanceButtons" type="HBoxContainer" parent="StanceOverlay/StanceVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 15
+
+[node name="DefensiveBtn" type="Button" parent="StanceOverlay/StanceVBox/StanceButtons"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 50)
+text = "谨慎防御\n×0.8 / ×0.6"
+
+[node name="BalancedBtn" type="Button" parent="StanceOverlay/StanceVBox/StanceButtons"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 50)
+text = "均衡策略\n×1.0 / ×1.0"
+
+[node name="AggressiveBtn" type="Button" parent="StanceOverlay/StanceVBox/StanceButtons"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 50)
+text = "全力进攻\n×1.8 / ×1.5"
+
+[node name="TrumpPanel" type="HBoxContainer" parent="BottomBar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TrumpLabel" type="Label" parent="BottomBar/TrumpPanel"]
+layout_mode = 2
+text = "[王牌] "
+theme_override_font_sizes/font_size = 12
+
+[node name="TrumpScroll" type="ScrollContainer" parent="BottomBar/TrumpPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(400, 38)
+
+[node name="TrumpCards" type="HBoxContainer" parent="BottomBar/TrumpPanel/TrumpScroll"]
+layout_mode = 2
+
+[node name="ItemPanel" type="HBoxContainer" parent="BottomBar"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ItemLabel" type="Label" parent="BottomBar/ItemPanel"]
+layout_mode = 2
+text = "[道具] "
+theme_override_font_sizes/font_size = 12
+
+[node name="ItemScroll" type="ScrollContainer" parent="BottomBar/ItemPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(300, 38)
+
+[node name="ItemButtons" type="HBoxContainer" parent="BottomBar/ItemPanel/ItemScroll"]
+layout_mode = 2
+
+[node name="RoundEndOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0, 0.0, 0.0, 0.7)
+
+[node name="RoundEndVBox" type="VBoxContainer" parent="RoundEndOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -80.0
+offset_right = 160.0
+offset_bottom = 80.0
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="RoundEndLabel" type="Label" parent="RoundEndOverlay/RoundEndVBox"]
+layout_mode = 2
+text = "小局结束"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1.0, 0.9, 0.3, 1.0)
+theme_override_font_sizes/font_size = 22
+
+[node name="NextRoundButton" type="Button" parent="RoundEndOverlay/RoundEndVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 54)
+text = "继续冒险 ▶"
+theme_override_colors/font_color = Color(0.2, 1.0, 0.3, 1.0)
+theme_override_font_sizes/font_size = 20
+
+[connection signal="pressed" from="BottomBar/ActionRow/HitButton" to="." method="_on_hit_pressed"]
+[connection signal="pressed" from="BottomBar/ActionRow/StandButton" to="." method="_on_stand_pressed"]
+[connection signal="pressed" from="BottomBar/ActionRow/DoubleButton" to="." method="_on_double_pressed"]
+[connection signal="pressed" from="StanceOverlay/StanceVBox/StanceButtons/DefensiveBtn" to="." method="_on_defensive_pressed"]
+[connection signal="pressed" from="StanceOverlay/StanceVBox/StanceButtons/BalancedBtn" to="." method="_on_balanced_pressed"]
+[connection signal="pressed" from="StanceOverlay/StanceVBox/StanceButtons/AggressiveBtn" to="." method="_on_aggressive_pressed"]
+
+[connection signal="pressed" from="RoundEndOverlay/RoundEndVBox/NextRoundButton" to="." method="_on_next_round_pressed"]

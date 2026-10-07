@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://swordsman001"]
+
+[ext_resource type="Script" path="res://scripts/resources/character_data.gd" id="1_char_data"]
+
+[resource]
+script = ExtResource("1_char_data")
+char_name = "剑士·雷恩"
+class_type = 0
+portrait = "res://resources/portraits/swordsman_rein.png"
+description = "平衡型勇者，攻守兼备，适合新手。"
+max_health = 40.0
+base_damage = 3.5
+passive_name = "钢铁意志"
+passive_desc = "每场战斗开始获得2点护盾，护盾可抵挡伤害"
+passive_trigger = "battle_start"
+skill1_name = "斩击预判"
+skill1_cooldown = 2
+skill1_desc_lv1 = "查看敌方1张暗牌（冷却2回合）"
+skill1_desc_lv2 = "查看敌方1张暗牌并获得其点数提示（冷却2回合）"
+skill1_desc_lv3 = "查看敌方全部手牌（冷却2回合）"
+skill2_name = "剑气护体"
+skill2_cooldown = 3
+skill2_desc_lv1 = "本局失败时减免2点伤害（冷却3回合）"
+skill2_desc_lv2 = "本局失败时减免3点伤害（冷却3回合）"
+skill2_desc_lv3 = "本局失败时减免4点伤害；若未失败则下局伤害+1（冷却3回合）"
+evolution_desc_lv10 = "剑气护体减免提升至3点"
+evolution_desc_lv20 = "斩击预判可看到点数范围"
+evolution_desc_lv30 = "剑气护体质变：失败转增益"

@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/settings_panel.gd" id="1_settings"]
+[ext_resource type="Texture2D" path="res://resources/ui/settings_bg.png" id="2_bg"]
+
+[node name="SettingsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_settings")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="BrightnessSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37
+anchor_top = 0.41
+anchor_right = 0.68
+anchor_bottom = 0.45
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 0.1
+max_value = 1.5
+step = 0.01
+value = 1.0
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37
+anchor_top = 0.52
+anchor_right = 0.68
+anchor_bottom = 0.56
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.01
+value = 0.75
+
+[node name="BackBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.68
+anchor_right = 0.80
+anchor_bottom = 0.82
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(180, 60)
+z_index = 1
+flat = true

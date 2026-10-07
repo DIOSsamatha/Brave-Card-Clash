@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://mage001"]
+
+[ext_resource type="Script" path="res://scripts/resources/character_data.gd" id="1_char_data"]
+
+[resource]
+script = ExtResource("1_char_data")
+char_name = "法师·莉莉娅"
+class_type = 1
+portrait = "res://resources/portraits/mage_lilia.png"
+description = "进攻型勇者，以魔法火力压制对手。"
+max_health = 35.0
+base_damage = 4.0
+passive_name = "魔力涌动"
+passive_desc = "每3局获得1张\"小火球\"魔法卡（造成2点强制伤害）"
+passive_trigger = "every_3_rounds"
+skill1_name = "火焰置换"
+skill1_cooldown = 2
+skill1_desc_lv1 = "自己1张手牌与牌堆顶交换（冷却2回合）"
+skill1_desc_lv2 = "交换后查看新抽到的牌（冷却2回合）"
+skill1_desc_lv3 = "选择与牌堆顶或牌堆第2张交换（冷却2回合）"
+skill2_name = "诅咒爆牌"
+skill2_cooldown = 3
+skill2_desc_lv1 = "强制庄家多抽1张（冷却3回合）"
+skill2_desc_lv2 = "强制庄家多抽1张，且该牌必定为小牌（≤5）（冷却3回合）"
+skill2_desc_lv3 = "强制庄家多抽2张（冷却3回合）"
+evolution_desc_lv10 = "火焰置换可查看新牌"
+evolution_desc_lv20 = "诅咒爆牌控制牌值"
+evolution_desc_lv30 = "诅咒爆牌质变：双倍强抽"

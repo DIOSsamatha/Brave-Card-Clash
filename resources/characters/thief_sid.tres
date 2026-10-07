@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://thief001"]
+
+[ext_resource type="Script" path="res://scripts/resources/character_data.gd" id="1_char_data"]
+
+[resource]
+script = ExtResource("1_char_data")
+char_name = "盗贼·希德"
+class_type = 2
+portrait = "res://resources/portraits/thief_sid.png"
+description = "技巧型勇者，以信息优势和干扰能力取胜。"
+max_health = 35.0
+base_damage = 3.5
+passive_name = "敏锐直觉"
+passive_desc = "每局看到牌堆顶部1张牌"
+passive_trigger = "each_round"
+skill1_name = "顺手牵羊"
+skill1_cooldown = 4
+skill1_desc_lv1 = "随机偷取庄家1张手牌（冷却4回合）"
+skill1_desc_lv2 = "选择偷取庄家1张手牌（冷却4回合）"
+skill1_desc_lv3 = "偷取庄家1张手牌并查看其暗牌（冷却3回合）"
+skill2_name = "烟雾弹"
+skill2_cooldown = 3
+skill2_desc_lv1 = "庄家下回合无法使用技能（冷却3回合）"
+skill2_desc_lv2 = "庄家下2回合无法使用技能（冷却3回合）"
+skill2_desc_lv3 = "庄家下2回合无法使用技能；本局姿态倍率对你无效（冷却3回合）"
+evolution_desc_lv10 = "顺手牵羊可选择目标"
+evolution_desc_lv20 = "烟雾弹持续延长"
+evolution_desc_lv30 = "烟雾弹质变：免疫敌方姿态"
